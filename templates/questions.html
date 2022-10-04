@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Movies{% endblock %}
+{% block content %} 
+
+<h1>{{title}}</h1>
+
+<p>{{question}}</p>
+
+<form name="qform" action="/answer" method="POST">
+    {% for each in choices %}
+        <p> 
+        <label for="{{each}}">{{each}}</label>
+        <input type="radio" value="{{each}}" name="options">
+        </p>
+        
+    {% endfor %}
+    {% if txt %}
+            <p><input type="text" placeholder="" name="comment"></p>
+    {% endif %}
+    <button>Submit</button>
+</form>
+{% endblock %}
