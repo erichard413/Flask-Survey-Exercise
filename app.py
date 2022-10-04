@@ -19,6 +19,9 @@ survey_name = "satisfaction" ## name of survey dynamically creates Q pages for s
 title = surveys[survey_name].title
 survey = surveys[survey_name]
 survey_names = surveys.keys()
+@app.route("/index.html")
+def initialize_page():
+    return redirect("/")
 
 @app.route("/")
 def start_survey():
