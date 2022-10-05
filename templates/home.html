@@ -3,9 +3,9 @@
 {% block content %} 
       <h1>Select your survey</h1>
       
-      <form action="/startnew" method="POST">
+      <form action="/home" method="POST">
             <label for="surveys">Choose a survey:</label>
-            <select id="surveys" name="surveys">
+            <select id="surveys" name="s_name">
                 {% for name in surveys %}
                     <option value="{{name}}">{{name}}</option>
                 {% endfor %}

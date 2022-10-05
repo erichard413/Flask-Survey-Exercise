@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
-{% block title %}Start Survey{% endblock %}
+{% block title %}End Survey{% endblock %}
 {% block content %} 
       <h1>Thank you for your input!</h1>
-      <p>Your submission is of great value to us.</p>
+      {% for each in output %}
+            <p>{{each}}</p>
+      {% endfor %}
+      
 {% endblock %}

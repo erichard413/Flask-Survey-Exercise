@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Movies{% endblock %}
+{% block title %}Survey{% endblock %}
 {% block content %} 
 
 <h1>{{title}}</h1>
@@ -15,7 +15,7 @@
         
     {% endfor %}
     {% if txt %}
-            <p><input type="text" placeholder="" name="comment"></p>
+        <p><input name="comment"></p>
     {% endif %}
     <button>Submit</button>
 </form>
